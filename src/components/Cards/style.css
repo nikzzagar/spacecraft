@@ -1,0 +1,70 @@
+.spacecraft{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.spacecraft__cards {
+  background-color: #ffffff;
+  margin: 0 0 1rem 1rem;
+  border-radius: 5px;
+  padding: 1rem;
+  height: 400px;
+  width: 15%;
+  overflow: scroll
+}
+
+.flight__header {
+  color: rgb(105, 105, 167);
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.flight__labels {
+  color: black;
+  font-weight: 700;
+}
+.flight__values{
+  color: rgb(105, 105, 167);
+}
+
+.loader > div {
+  display: flex;
+  justify-content: center;
+  margin-top: 38vh;
+}
+
+@media only screen and (max-width: 700px) {
+  .spacecraft__cards {
+    width: 90%;
+    height: 60vh;
+  }
+  .flight__header {
+    font-size: 1.5rem;
+  }
+  .flight__labels {
+    font-size: 1.5rem;
+  }
+  .flight__values {
+    font-size: 1.5rem;
+  }
+  .loader > div {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+  .spacecraft__cards {
+    margin: 0 0 0.5rem 0.5rem;
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .spacecraft__cards {
+    margin: 0 0 0.8rem 0.8rem;
+    width: 27%;
+  }
+}

@@ -1,0 +1,84 @@
+.launchcard__heading {
+  margin: 0px;
+}
+
+.launchcard__heading--secondary {
+	text-align: center;
+	border-bottom: 1px solid grey;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.launchyear {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.launch--button {
+	background-color: #c2f9bf; /* Green */
+	border: none;
+	color: black;
+	padding: 7px 18px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 8px;
+	border-radius: 5px;
+}
+
+.launch--button:hover {
+	cursor: pointer;
+}
+
+.launch--button:active {
+	background-color: rgb(96, 145, 97);
+}
+
+@media only screen and (max-width: 700px) {
+	.launchcard__heading {
+	  font-size: 3rem;
+	}
+	.launchcard__heading--secondary{
+		font-size: 2.5rem;
+	}
+	.launch--button {
+		font-size: 3rem;
+		border-radius: 1rem;
+		margin: 1rem;
+		padding: 1rem 1rem;
+		width: 32%;
+	}
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+	.launchcard__heading {
+	  font-size: 2rem;
+	}
+	.launchcard__heading--secondary{
+		font-size: 2rem;
+	}
+	.launch--button {
+		font-size: 1.5rem;
+		border-radius: 0.5rem;
+		margin: 1rem;
+		padding: 0.5rem 0.5rem;
+		width: 22%;
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	.launchcard__heading {
+	  font-size: 1.5rem;
+	}
+	.launchcard__heading--secondary{
+		font-size: 1.5rem;
+	}
+	.launch--button {
+		font-size: 1rem;
+		border-radius: 0.5rem;
+		margin: 1rem;
+		padding: 0.5rem 0.5rem;
+		width: 25%;
+	}
+}
