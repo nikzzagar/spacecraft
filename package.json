@@ -15,8 +15,8 @@
   },
   "scripts": {
     "start": "node build/s-bundle.js",
-    "build": "webpack --config config/webpack.server.js && webpack --config config/webpack.client.js",
-    "build:start": "webpack --config config/webpack.server.js && webpack --config config/webpack.client.js && node build/s-bundle.js",
+    "build": "webpack --config config/webpack.client.js && webpack --config config/webpack.server.js",
+    "build:start": "webpack --config config/webpack.client.js && webpack --config config/webpack.server.js && node build/s-bundle.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "npm-run-all --parallel dev:*",
