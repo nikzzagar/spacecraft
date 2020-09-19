@@ -14,8 +14,9 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node build/s-bundle.js",
+    "build": "webpack --config config/webpack.server.js && webpack --config config/webpack.client.js",
+    "build:start": "webpack --config config/webpack.server.js && webpack --config config/webpack.client.js && node build/s-bundle.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "npm-run-all --parallel dev:*",
@@ -45,6 +46,8 @@
     "babel-loader": "^8.1.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^4.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
     "isomorphic-style-loader": "^5.1.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
