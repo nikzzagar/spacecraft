@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './style.css'
 
 const Cards = ({ spaceData }) => {
@@ -53,5 +54,9 @@ const Cards = ({ spaceData }) => {
       })}
     </div>
   )
+}
+
+Cards.propTypes = {
+  spaceData: PropTypes.array.isRequired
 }
 export default Cards;  

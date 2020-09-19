@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import constant from '../../constant'
 import './style.css'
 
@@ -55,5 +56,11 @@ const Launchcard = ({selectYear, selectLaunch, selectLanding}) => {
       </div>
     </>
   )
+}
+
+Launchcard.propTypes = {
+  selectYear: PropTypes.func.isRequired,
+  selectLaunch: PropTypes.func.isRequired,
+  selectLanding: PropTypes.func.isRequired
 }
 export default Launchcard;  
