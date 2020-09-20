@@ -11,7 +11,7 @@ const successfulLanding = {
   False: 'false'
 }
 
-module.exports = {
+export default {
   launchYears,
   launchButtons,
   successfulLanding

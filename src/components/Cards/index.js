@@ -8,7 +8,7 @@ const Cards = ({ spaceData }) => {
       {spaceData.map((cardData) => {
         const missionIds = cardData.mission_id.map((id) => {
           return (
-            <li className="flight__values">
+            <li className="flight__values" key={`flightid-${id}`}>
               {id}
             </li>
           )
@@ -18,7 +18,7 @@ const Cards = ({ spaceData }) => {
             <img src={cardData.links.mission_patch} alt={cardData.mission_name}
               style={{width: '100%', height: '62%', backgroundColor: '#17151536'}}
             />
-            <h4 class="flight__header">{`${cardData.mission_name} #${cardData.flight_number}`}</h4>
+            <h4 className="flight__header">{`${cardData.mission_name} #${cardData.flight_number}`}</h4>
             <div className="flight__labels">
               Mission Ids:
             </div>

@@ -1,4 +1,5 @@
 const path = require('path');
+const webpackNodeExternals = require('webpack-node-externals');
 
 module.exports = {
   target: 'node',  // Server side. Not for client browser
@@ -10,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test:/\.js?$/,
+        test:/\.(js|jsx)?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
@@ -29,5 +30,6 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  externals: [webpackNodeExternals()]
 }

@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/client.js',
   output : {
     filename: 'c-bundle.js',
     path: path.resolve(__dirname, '../public')  
@@ -16,7 +16,7 @@ module.exports = {
         ]
       },
       {
-        test:/\.js?$/,
+        test:/\.(js|jsx)?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {

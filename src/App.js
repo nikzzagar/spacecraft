@@ -1,14 +1,14 @@
 import React from 'react';
-import LaunchSystem from '../src/components/LaunchSystem'
+import { renderRoutes } from 'react-router-config'
 import './App.css';
 
-function App() {
+function App({route}) {
   return (
     <div className="main">
-      <LaunchSystem />
+      {renderRoutes(route.routes) }
     </div>
 
   );
 }
 
-export default App;
+export default {component: App};
