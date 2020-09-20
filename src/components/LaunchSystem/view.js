@@ -82,9 +82,9 @@ class LaunchSystem extends React.Component {
   renderHeadTags () {
     return (
       <Helmet>
-        <title> Home page of the planets most amazing concerts </title>
-        <meta property="og:title" content="Concerts near you" />
-        <meta property="og:image" content="public/cover-poster.png" />
+        <title> SpaceX Program </title>
+        <meta property="og:title" content="SpaceX Program Details" />
+        <meta property="og:image" content="public/spacex.jpeg" />
       </Helmet>
     )
   }
@@ -108,7 +108,7 @@ class LaunchSystem extends React.Component {
           <div className ="col-2 column">
             {
               fetchingData? (
-                <div className ="loader">
+                <div className ="loader" id="fetch-loader">
                   <Loader
                     type="Grid"
                     color="#00BFFF"
@@ -123,7 +123,7 @@ class LaunchSystem extends React.Component {
           </div>
         </div>
         {!fetchingData && (
-        <footer className="footer">
+        <footer className="footer" id="footer-content">
           Developed By: Nitin Agrawal
         </footer>
         )}
@@ -133,7 +133,8 @@ class LaunchSystem extends React.Component {
 }
 LaunchSystem.propTypes = {
   fetchSpacecards: PropTypes.func.isRequired,
-  fetchingData: PropTypes.bool.isRequired
+  fetchingData: PropTypes.bool.isRequired,
+  spaceData: PropTypes.array.isRequired
 }
 
 export default LaunchSystem

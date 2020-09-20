@@ -5,20 +5,20 @@ import './style.css'
 const Cards = ({ spaceData }) => {
   return (
     <div className="spacecraft">
-      {spaceData.map((cardData) => {
+      {spaceData && spaceData.length && spaceData.map((cardData) => {
         const missionIds = cardData.mission_id.map((id) => {
           return (
-            <li className="flight__values" key={`flightid-${id}`}>
+            <li className="flight__values" key={`flightid-${id}`} id={`flightid-${id}`}>
               {id}
             </li>
           )
         })
         return (
-          <div className="spacecraft__cards">
-            <img src={cardData.links.mission_patch} alt={cardData.mission_name}
+          <div className="spacecraft__cards" id="spacecraft__cards">
+            <img src={cardData.links.mission_patch || ''} alt={cardData.mission_name || 'no image'}
               style={{width: '100%', height: '62%', backgroundColor: '#17151536'}}
             />
-            <h4 className="flight__header">{`${cardData.mission_name} #${cardData.flight_number}`}</h4>
+            <h4 className="flight__header">{`${cardData.mission_name || ''} #${cardData.flight_number || ''}`}</h4>
             <div className="flight__labels">
               Mission Ids:
             </div>
@@ -30,7 +30,7 @@ const Cards = ({ spaceData }) => {
                 Launch Year:
               </span>
               <span className="flight__values">
-                {cardData.launch_year}
+                {cardData.launch_year || ''}
               </span>
             </div>
             <div>
