@@ -6,6 +6,10 @@ const Cards = ({ spaceData }) => {
   return (
     <div className="spacecraft">
       {spaceData && spaceData.length && spaceData.map((cardData) => {
+        const landingSuccess = (cardData.rocket
+          && cardData.rocket.first_stage
+          && cardData.rocket.first_stage.cores[0]
+          && cardData.rocket.first_stage.cores[0].land_success) || false
         const missionIds = cardData.mission_id.map((id) => {
           return (
             <li className="flight__values" key={`flightid-${id}`} id={`flightid-${id}`}>
@@ -46,7 +50,7 @@ const Cards = ({ spaceData }) => {
                 Successful Landing:
               </span>
               <span className="flight__values">
-                {cardData.launch_landing ? 'True': 'False'}
+                {landingSuccess ? 'True': 'False'}
               </span>
             </div>
           </div>
